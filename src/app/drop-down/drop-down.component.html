@@ -1,0 +1,39 @@
+
+<form class="card" [formGroup]="locationData">
+    <div class="row">
+    <div class=" col-lg-5 col-3">
+        <label class="label">Territory : </label>
+        <select class="form-group" formControlName="location" (change)="getLocationId($event.target)" name="location" id="location">
+            <option [value]=""></option>
+            <option *ngFor="let data of allData" value= {{data.locationId}}>{{data.locationName}}</option>
+        </select>
+    </div>
+
+    <div class=" col-lg-5 col-3">
+        <label class="label">Site : </label>
+        <select class="form-group" formControlName="territory" (change)="getCampus($event.target)" name="location" id="location">
+            <option [value]=""></option>
+            <option *ngFor="let data of locationIdData" value= {{data.campusId}}>{{data.name}}</option>
+        </select>
+    </div><br>
+</div> 
+
+</form>
+    <div *ngIf="locationData.value.territory">
+    <table class="table table-striped" style="border: 2px solid black;width: 70%;">
+        <thead>
+        <td><strong> Description</strong></td>
+        <td><strong> Qantity </strong></td>
+        <td><strong>UOM </strong></td>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let data of campusdata">
+            <td>{{data.description |uppercase}}</td>
+            <td>{{data.value}}</td>
+            <td>{{data.uom}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    

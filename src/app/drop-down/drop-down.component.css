@@ -1,0 +1,20 @@
+.form-group{
+    margin: 30px;
+    width: 70%;
+    border: 1px solid lightgray;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.card{
+    margin: 30px;
+}
+
+.label{
+    margin-left: 10px;
+}
+
+.table{
+    margin: 30px;
+    
+}
