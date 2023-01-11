@@ -76,13 +76,3 @@ console.log(this.body);
   }
 }
 
-// postUser(data: any) {
-//   const headers = { 'content-type': 'application/json'
-//   ,Authorization:'http://cmi-ofm-qa.azurewebsites.net/api/Location/Activelocations',
-//   ApplicationCode:'DBSAAS'}
-
-//   return this.http.post<any>("http://161.97.104.204:8018/api/v1/CRUD/DSQ/TABMD_AppObject/List_TABMD_AppObject", data,{'headers':headers})
-//     .pipe(map((res: any) => {
-//       return res;
-//     }))
-// }
